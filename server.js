@@ -1,19 +1,13 @@
 const express = require('express');
-// const productRoutes = require('./Routes/product');  
-// const AuthRoutes = require('./Routes/auth'); 
-
 const morgan = require('morgan');
-
 const cors = require('cors'); 
-
-const bodyParser = require('body-parser');
-
-
 const {readdirSync} = require('fs'); 
 const bodyParse = require('body-parser');
 const connectDB = require('./Config/db');
-
 const app = express();
+
+// const productRoutes = require('./Routes/product');  
+// const AuthRoutes = require('./Routes/auth'); 
 connectDB(); // Connect to MongoDB
 app.use(morgan('dev')); // Middleware for logging requests
 app.use(cors()); // Middleware for enabling CORS

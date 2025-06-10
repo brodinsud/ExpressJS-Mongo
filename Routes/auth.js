@@ -2,12 +2,15 @@ const   express = require('express');
 const   router = express.Router();
 
 
-
-router.get('/auth', (req, res) => {
-    res.send('Auth Endpoint');
+//http://localhost:5000/api/register
+router.post('/register', (req, res) => {
+    res.send('register Endpoint');
 }
 );
 
+router.post('/login',(req,res)=> {
+    res.send('login Endpoint');
+}),
 
 module.exports = router;// Route to handle GET requests
 
